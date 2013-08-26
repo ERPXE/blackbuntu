@@ -1,0 +1,26 @@
+LABEL BLACKBUNTULIVE32 
+MENU LABEL ^BlackBuntu Live x32
+KERNEL er/plugins/blackbuntu/i386/vmlinuz
+INITRD er/plugins/blackbuntu/i386/initrd.gz
+APPEND file=er/plugins/blackbuntu/i386/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/blackbuntu/i386 ramdisk_size=200000 nolock root=/dev/nfs dhcp aufs
+TEXT HELP
+                 BlackBuntu x32 Live.
+ENDTEXT
+
+LABEL BLACKBUNTULIVEINSTALL32
+MENU LABEL ^BlackBuntu x32 Install
+KERNEL er/plugins/blackbuntu/i386/vmlinuz
+INITRD er/plugins/blackbuntu/i386/initrd.gz
+APPEND file=er/plugins/blackbuntu/i386/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/blackbuntu/i386 ramdisk_size=200000 nolock root=/dev/nfs dhcp only-ubiquity aufs
+TEXT HELP
+                 BlackBuntu x32 Install.
+ENDTEXT
+
+LABEL TEXTONLY32
+MENU LABEL ^BlackBuntu Live x32 textonly mode
+KERNEL er/plugins/blackbuntu/i386/vmlinuz
+INITRD er/plugins/blackbuntu/i386/initrd.gz
+APPEND file=er/plugins/blackbuntu/i386/custom.seed vga=normal boot=casper netboot=nfs nfsroot=10.0.0.1:/tftpboot/er/shares/blackbuntu/i386 ramdisk_size=200000 nolock root=/dev/nfs dhcp text aufs
+TEXT HELP
+                 BlackBuntu x32 textonly mode.
+ENDTEXT
